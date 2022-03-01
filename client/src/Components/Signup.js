@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 function Signup({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -39,62 +44,68 @@ function Signup({ onLogin }) {
   }
 
     return (
-        <div className="login_box">
-        <form className="bg-red-200 shadow-md rounded px-8 pb-8 mb-4 w-96"onSubmit={handleSubmit}>
-            <h2 className="font-semibold pt-4">Please Sign In</h2>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"
-                type="text"
-                placeholder="username"
-                id="username"
-                autoComplete="off"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Password"
-                type="text"
-                placeholder="first name"
-                id="first_name"
-                value={firstname}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </div>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Password"
-                type="text"
-                placeholder="last name"
-                id="last_name"
-                value={lastname}
-                onChange={(e) => setLastName(e.target.value)}
-              />
-            </div>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Password"
-                type="password"
-                placeholder="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
-              />
-            </div>
-            <div className="px-4 py-2">
-              <button className="bg-yellow-100 rounded-sm py-1 px-6 font-semibold" type="submit">
-                  {isLoading ? "Loading..." : "Sign Up"}
-              </button>
-            </div>
-            <div className="text-red-600 pb-4">
-                {errors.map((err) => (
-                  <li key={err}>{err}</li>
-                ))}
-            </div>
-          </form>
+        <div>
+            <Card align='center' sx={{ minWidth: 275 }} style={{backgroundColor: "#B1DFB0"}}>
+              <Typography style={{fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                Create an account
+              </Typography> 
+                <CardContent align='center'>
+                    <Typography >
+                      <form onSubmit={handleSubmit}>
+                        <TextField
+                          sx={{bgcolor: '#cfe8fc' }}
+                          required
+                          variant="filled"
+                          type="text"
+                          name="comment"
+                          autoComplete="off"
+                          value={username}
+                          label="Username"
+                          onChange={(e) => setUsername(e.target.value)}
+                          /><br/>
+                        <TextField
+                          sx={{bgcolor: '#cfe8fc' }}
+                          required
+                          variant="filled"
+                          type="password"
+                          name="comment"
+                          autoComplete="off"
+                          value={password}
+                          label="Password"
+                          onChange={(e) => setPassword(e.target.value)}
+                          /><br/>
+                        <TextField
+                          sx={{bgcolor: '#cfe8fc' }}
+                          required
+                          variant="filled"
+                          type="text"
+                          name="comment"
+                          autoComplete="off"
+                          value={firstname}
+                          label="First Name"
+                          onChange={(e) => setFirstName(e.target.value)}
+                          /><br/>
+                        <TextField
+                          sx={{bgcolor: '#cfe8fc' }}
+                          variant="filled"
+                          type="text"
+                          name="comment"
+                          autoComplete="off"
+                          value={lastname}
+                          label="Last Name"
+                          onChange={(e) => setLastName(e.target.value)}
+                          /><br/>
+                          <br/>
+                        <Button variant="outlined" type="submit">{isLoading ? "Loading..." : "Sign Up"}</Button><br/>
+                      </form><br/>
+                      <div>
+                        {errors.map((err) => (
+                          <li key={err}>{err}</li>
+                        ))}
+                      </div>
+                    </Typography>
+                </CardContent>
+              </Card>
         </div>
     )
 }

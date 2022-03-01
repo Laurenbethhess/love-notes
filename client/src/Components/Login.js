@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Signup from "./Signup"
 import { useNavigate } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -33,66 +38,74 @@ function Login({ onLogin }) {
   }
 
   return (
-    <div  className="pt-6 flex justify-center font-mono text-center mt-20">
+    <div className="login"> 
       {showLogin ? (
-        <div>
-          <form className="bg-red-200 shadow-md rounded px-8 pb-8 mb-4 w-96"onSubmit={handleSubmit}>
-          <h1 className="font-semibold pt-4">Welcome to LoveNotes!</h1>
-          <h2 className="font-semibold pt-4">Please Login</h2>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"
-                type="text"
-                id="username"
-                autoComplete="off"
-                placeholder="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div className="px-6 py-2">
-              <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                placeholder="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className="px-4 py-2">
-              <button className="bg-yellow-100 rounded-sm py-1 px-6 font-semibold" type="submit">
-                  {isLoading ? "Loading..." : "Login"}
-              </button>
-            </div>
-            <div className="text-red-600 pb-4">
-                {errors.map((err) => (
-                  <span key={err}>{err}</span>
-                ))}
-            </div>
-            <div className="pb-4">
-              <p>
-                Don't have an account? &nbsp;
-                <button className="italic underline" onClick={() => setShowLogin(false)}>
-                  Sign Up
-                </button>
-              </p>
-            </div> 
-          </form>
-        </div>
-      ) : (
-        <div>
-          <Signup onLogin={onLogin} />
-          <br />
-          <p>
-            Already have an account? &nbsp;
-            <button className="italic underline" onClick={() => setShowLogin(true)}>
-              Log In
-            </button>
-          </p>
-        </div>
-      )}
+      <div>
+        <Card align='center' sx={{paddingTop: 2, minWidth: 600 }} style={{backgroundColor: "#B1DFB0"}}>
+          <Typography style={{fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+            Welcome to <i>LoveNotes!</i>  Please Login.
+          </Typography>       
+          <CardContent align='center'>
+            <Typography >
+              <form onSubmit={handleSubmit}>
+                <TextField
+                  sx={{bgcolor: '#cfe8fc' }}
+                  variant="filled"
+                  type="text"
+                  id="username"
+                  autoComplete="off"
+                  label="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                /><br/><br/>
+                <TextField
+                  sx={{bgcolor: '#cfe8fc' }}
+                  variant="filled" 
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  label="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                /><br/><br/>
+                <Button variant="outlined" type="submit">
+                    {isLoading ? "Loading..." : "Login"}
+                </Button>
+                <div>
+                    {errors.map((err) => (
+                      <span key={err}>{err}</span>
+                    ))}
+                </div>
+              </form>            
+            </Typography>
+            <br/>
+            <Typography>
+              Don't have an account? &nbsp;
+              <Button variant="outlined" onClick={() => setShowLogin(false)}>
+                Sign Up
+              </Button>
+            </Typography>
+          </CardContent>
+        </Card>
+    </div>
+    ) : (
+      <div>
+        <Card sx={{ minWidth: 275 }} style={{backgroundColor: "#B1DFB0"}}>
+                <CardContent>
+                    <Typography style={{fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                      <Signup onLogin={onLogin} />
+                      Already have an account? &nbsp;
+                      <Button variant="outlined" onClick={() => setShowLogin(true)}>
+                        Log In
+                    </Button>
+                    </Typography>
+                </CardContent>
+            </Card>
+            <br/><br/>
+      </div>
+    )}
+
+      
     </div>
   );
 }

@@ -6,7 +6,6 @@
 
 .rose {
   font-family: 'Courier New', Courier, monospace;
-  /* padding-top: 20px; */
   height: 297px;
   width: 210px;
   font-size: 7px;
@@ -36,13 +35,15 @@
 
 .aqua {
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 20px;
   height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
   color: black;
   background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aqua_thumb {
@@ -62,13 +63,16 @@
 
 .green {
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 20px;
   height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
   color: black;
   background-color: #ACE1AF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .green_thumb {
@@ -88,13 +92,15 @@
 
 .yellow {
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 20px;
   height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
   color: black;
   background-color: #F4C430;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .yellow_thumb {
@@ -118,6 +124,13 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: black;
+}
+
+.login {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding-top: 100px;
 }
 
 
