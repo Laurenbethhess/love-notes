@@ -1,3 +1,9 @@
+.home_photo {
+  height: 300px;
+  width: 700px;
+  border-radius: 10px;
+}
+
 .blank {
   color: white;
 }
@@ -16,7 +22,7 @@
 .rose_thumb {
   width: 400px;
   height: 100px;
-  top: 50px;
+  top: 150px;
   left: 100px;
   position: absolute;
   border-radius: 25px;
@@ -42,7 +48,7 @@
 .aqua_thumb {
   width: 400px;
   height: 100px;
-  top: 50px;
+  top: 150px;
   left: 950px;
   position: absolute;
   border-radius: 25px;
@@ -114,16 +120,6 @@
   color: black;
 }
 
-.nav_rectangle {
-  position: absolute;
-  width: 1440px;
-  height: 100px;
-  left: 0px;
-  top: 0px;
-  opacity: 0.5;
-  background: #FAFCAF;
-}
-
 .e_card {
   position: absolute;
   width: 231px;
@@ -139,81 +135,6 @@
   color: #000000;  
 }
 
-.logout_button {
-  position: absolute;
-  width: 100px;
-  height: 75px;
-  top: 0px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 69px;
-  text-align: center;
-  color: #000000;  
-  left: 1300px;
-  text-align: center;
-  color: #000000;
-  cursor:pointer;
-  border-style: solid;
-  border-color: #000000;
-  border-radius: 5pt;
-}
-
-.welcome {
-  position: absolute;
-  width: 231px;
-  height: 50px;
-  left: 1060px;
-  top: 0px;
-  font-family: cursive;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 75px;
-  text-align: center;
-  color: #000000;  
-}
-
-.form_link {
-  position: absolute;
-  left: 825px;
-  top: 0px;
-  font-family: courier;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 75px;
-  text-align: center;
-  color: #000000;  
-}
-
-.my_cards_link {
-  position: absolute;
-  left: 600px;
-  top: 0px;
-  font-family: courier;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 75px;
-  text-align: center;
-  color: #000000;  
-}
-
-.home_link {
-  position: absolute;
-  left: 450px;
-  top: 0px;
-  font-family: courier;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 75px;
-  text-align: center;
-  color: #000000;
-}
-
 .form {
   text-align: center;
   padding-top: 30px;
@@ -221,18 +142,6 @@
 
 .render_cards {
   padding-top: 40px;
-}
-
-.form_background {
-  position: absolute;
-  width: 1440px;
-  height: 750px;
-  left: 0px;
-  top: 75px;
-  border: 1px solid #000000;
-  box-sizing: border-box; 
-  background-color: #f5e9a4;
-  background-size: 1500px;
 }
 
 .form_input_rectangle {
@@ -251,10 +160,6 @@
   text-align: center;
 }
 
-.home_background {
-  background-color: #f5e9a4;
-}
-
 .top {
-  padding-top: 140px;
+  padding-top: 100px;
 }

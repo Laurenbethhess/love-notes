@@ -1,5 +1,11 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
 
 function Nav( {user, onSetUser}) {
 
@@ -12,19 +18,32 @@ function Nav( {user, onSetUser}) {
     }
 
     return (
-        <div className="bg-red-200 sticky top-0 z-50 py-6">
-            <div className="flex justify-between text-lg font-mono font-semibold">
-                <div className="px-2">
-                    <p>Welcome to <i>LoveNotes</i> {user.first_name}!</p>
-                </div>
-                <div className="px-2 space-x-4 float-right ">
-                    <Link to="/">Home</Link>
-                    <Link to="/new_card">Create</Link>
-                    <Link to="/my_cards">My Cards</Link>
-                    <Link to="/logout" onClick={handleLogoutClick}>Logout</Link>
-                </div>
-            </div>
-        </div>
+    <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="fixed">
+            <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+                Welcome to <i>LoveNotes</i>, {user.first_name}!
+            </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+                <Link to="/">Home</Link>
+            </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+                <Link to="/new_card">Create</Link>
+            </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+                <Link to="/my_cards">My Cards</Link>
+            </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+                {user?
+                    <Button variant="outlined" style={{fontFamily: "Courier", fontSize: 20}} onClick={handleLogoutClick} color="inherit">Logout</Button>
+                :
+                    <Link to="/login">Login</Link>
+                } 
+            </Typography>
+            </Toolbar>
+        </AppBar>
+    </Box>
+        
     )
 }
 

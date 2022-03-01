@@ -1,31 +1,40 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 function Home() {
     return (
-        <div className="home_background">
-            <div className="flex justify-center">
-                <h1 className="py-8 text-4xl font-mono font-bold italic m-6">Send love to your loved ones</h1>
+        <div>
+            <div align='center'>
+                <Box sx={{paddingTop: 12, width: '100%', maxWidth: 1200 }}>
+                    <Typography style={{fontStyle: "italic", fontWeight: "bold", fontSize: 30, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                        Send love to your loved ones.
+                    </Typography>
+                </Box>
             </div>
-            <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
-                <div class="carousel-inner relative w-full h-96 overflow-hidden">
-                    <div class="carousel-item active relative float-left w-full">
-                    <img
-                        src="https://ak.imgag.com/imgag/product/siteassets/general/3497315/image.jpg"
-                        className="block w-full"
-                        alt="mcu1"
-                    />
-                    </div>
-                </div>
+            <div align='center'>
+                <Box sx={{paddingTop: 1, width: '100%', maxWidth: 1200 }}>
+                    <Typography>
+                        <img className="home_photo"  src="https://ak.imgag.com/imgag/product/siteassets/general/3497315/image.jpg"/>
+                    </Typography>
+                </Box>
             </div>
-            <div className="flex justify-center">
-                <p className="py-8 text-1xl font-mono m-4">Get started here</p>
+            <div align='center'>
+                <Box sx={{ width: '100%', maxWidth: 1200 }}>
+                    <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                        Get started here!
+                    </Typography>
+                </Box>
             </div>
-
-            <div className="flex justify-center">
-                <Link to="/new_card"><button className="bg-red-100 border-solid border-2 border-red-600 rounded-lg font-semibold px-6 py-2">Create</button></Link>
+            <div align='center'>
+                <Box sx={{ width: '100%', maxWidth: 1200 }}>
+                    <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                    <Link to="/new_card"><Button variant="outlined">Create</Button></Link>
+                    </Typography>
+                </Box>
             </div>
-            <br/>
         </div>    
     )
 

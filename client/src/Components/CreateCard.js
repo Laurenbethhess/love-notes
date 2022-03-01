@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import CardContent from '@mui/material/CardContent';
 
 function CreateCard( {onAddCard, user_id}) {
     const [receiver, setReceiver] = useState("")
@@ -46,88 +54,90 @@ function CreateCard( {onAddCard, user_id}) {
     }
   
     return (
-      
-      <div className="form_background">
-          <div className="rose_thumb">Roses are red</div>
-          <div className="aqua_thumb">As cold as blue blazes</div>
-          <div className="green_thumb">Green vibes only</div>
-          <div className="yellow_thumb">I'm just mad about saffron</div>
-
-          <div className="pt-6 flex justify-center">
-            <form className="bg-green-200 shadow-md rounded px-8 pb-8 mb-4" onSubmit={handleSubmit}>
-            <p className="font-semibold mt-4 flex justify-center">Create Your Card Here</p>
-              <div className="bg-red-100 m-4">
-                <select
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  onChange={(e) => setTemplateId(e.target.value)}>
-                  <option>Choose template</option>
-                  <option value="1">Roses are red</option>
-                  <option value="2">As cold as blue blazes</option>
-                  <option value="3">Green vibes only</option>
-                  <option value="4">I'm just mad about saffron</option>
-                </select>
-              </div>
-              <div className="bg-red-100 m-4">
-                <select 
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  onChange={(e) => setSalutation(e.target.value)}>
-                    <option >Choose Greeting</option>
-                    <option value="Greetings">Greetings</option>
-                    <option value="Hello">Hello</option>
-                    <option value="Hi">Hi</option>
-                    <option value="Dear">Dear</option>
-                </select>
-              </div>
-              <div className="bg-red-100 m-4">
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  name="receiver"
-                  autoComplete="off"
-                  value={receiver}
-                  placeholder="To"
-                  onChange={(e) => setReceiver(e.target.value)}
-                />
-              </div>
-              <div className="bg-red-100 m-4">
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  name="message"
-                  autoComplete="off"
-                  value={message}
-                  placeholder="Message"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </div>
-              <div className="bg-red-100 m-4">
-                <select 
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  onChange={(e) => setClosing(e.target.value)}>
-                    <option>Choose Signature</option>
-                    <option value="Love,">Love,</option>
-                    <option value="Yours Truly,">Yours Truly,</option>
-                    <option value="Sincerely,">Sincerely,</option>
-                    <option value="Condolences,">Condolences,</option>
-                    <option value="Thinking of you,">Thinking of you,</option>
-                    <option value="Best,">Best,</option>
-                    <option value="Thanks!">Thanks!</option>
-                    <option value="Thanks you!">Thank you!</option>
-                </select>
-              </div>
-              <div className="m-4 flex justify-center">
-                <button className="bg-red-100 border-solid border-2 border-red-600 mt-4 rounded-sm p-1 font-semibold" type="submit">Create Card</button>
-              </div>
-              <div className="text-red-600 pl-6 pb-4">
-                {errors.map((err) => (
-                  <li key={err}>{err}</li>
-                ))}
-              </div>
+      <div align='center' style={{paddingTop: 65}}>
+        <div className="rose_thumb">Roses are red</div>
+        <div className="aqua_thumb">As cold as blue blazes</div>
+        <div className="green_thumb">Green vibes only</div>
+        <div className="yellow_thumb">I'm just mad about saffron</div>
+          <CardContent style={{paddingTop: 80}}>
+            <form onSubmit={handleSubmit}>
+              <FormControl sx={{ minWidth: 275, bgcolor: '#cfe8fc' }}>
+                <InputLabel align='center'>Choose Template</InputLabel>
+                <Select
+                    value={template_id}
+                    label="Choose Template"
+                    onChange={(e) => setTemplateId(e.target.value)}
+                >
+                    <MenuItem value={1}>Roses are red</MenuItem>
+                    <MenuItem value={2}>As cold as blue blazes</MenuItem>
+                    <MenuItem value={3}>Green vibes only</MenuItem>
+                    <MenuItem value={4}>I'm just mad about saffron</MenuItem>
+                </Select>
+              </FormControl>
+              <br/>
+              <FormControl sx={{ minWidth: 275, bgcolor: '#cfe8fc' }}>
+                <InputLabel align='center'>Choose Greeting</InputLabel>
+                <Select
+                    value={salutation}
+                    label="Choose Greeting"
+                    onChange={(e) => setSalutation(e.target.value)}
+                >
+                    <MenuItem value="Greetings">Greetings</MenuItem>
+                    <MenuItem value="Hello">Hello</MenuItem>
+                    <MenuItem value="Hi">Hi</MenuItem>
+                    <MenuItem value="Dear">Dear</MenuItem>
+                </Select>
+              </FormControl>
+              <br/>
+              <Typography>
+                  <TextField
+                    sx={{bgcolor: '#cfe8fc' }}
+                    multiline
+                    variant="filled"
+                    type="text"
+                    name="to"
+                    autoComplete="off"
+                    value={receiver}
+                    label="To"
+                    onChange={(e) => setReceiver(e.target.value)}
+                  />
+                  <br/>
+                  <TextField
+                    sx={{bgcolor: '#cfe8fc' }}
+                    multiline
+                    variant="filled"
+                    type="text"
+                    name="message"
+                    autoComplete="off"
+                    value={message}
+                    label="Message"
+                    onChange={(e) => setMessage(e.target.value)}
+                  />                
+              </Typography>
+              <FormControl sx={{ minWidth: 275, bgcolor: '#cfe8fc' }}>
+              <InputLabel align='center'>Choose Signature</InputLabel>
+                <Select
+                    value={closing}
+                    label="Choose Signature"
+                    onChange={(e) => setClosing(e.target.value)}
+                >
+                    <MenuItem value="Love,">Love</MenuItem>
+                    <MenuItem value="Yours Truly,">Yours Truly</MenuItem>
+                    <MenuItem value="Sincerely,">Sincerely</MenuItem>
+                    <MenuItem value="Condolences,">Condolences</MenuItem>
+                    <MenuItem value="Thinking of you,">Thinking of you</MenuItem>
+                    <MenuItem value="Best,">Best</MenuItem>
+                    <MenuItem value="Thanks!">Thanks!</MenuItem>
+                    <MenuItem value="Thank you!">Thank you!</MenuItem>
+                </Select>
+              </FormControl>
+                <br/>
+              <Button variant="outlined" type="submit">Submit</Button>
             </form>
-            <br/>
-        </div>
-      </div>
-    )
+          </CardContent>
+        <br/>
+    </div>
+  )
 }
 
 export default CreateCard
