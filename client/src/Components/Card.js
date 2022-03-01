@@ -1,6 +1,8 @@
 import React, { } from "react";
 import EditCard from "./EditCard";
 import { useNavigate } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 function Card( {card, onUpdateCard, onCardDelete, handleSingleCard}) {
     const navigate = useNavigate();
@@ -21,7 +23,7 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard}) {
 
     return (
         <div>
-            <div onClick={handleclick} className="flex justify-center">
+            <div onClick={handleclick}>
             <div className={card.template.classname}>
                 <div className="message_render">
                     <div>
@@ -35,17 +37,20 @@ function Card( {card, onUpdateCard, onCardDelete, handleSingleCard}) {
                 </div>
             </div>
             </div>
-            <p className="flex justify-center">click image to save</p>
-            <div className="form_edit_rectangle">
-                <EditCard onUpdateCard={onUpdateCard} card={card}/>
-                <button className="bg-red-600 mt-4 p-1 font-semibold rounded-sm text-sm" onClick={handleDeleteClick}>Delete Card</button>
-                <br/>
-                <>__________________________________________________</>
-                <br/><br/>
-            </div>
+            <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                Click Image to Save
+            </Typography>
+            <>---</>
+            <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+                Edit Note Below
+            </Typography>
+            <EditCard onUpdateCard={onUpdateCard} card={card}/>
+            <Button variant="outlined" onClick={handleDeleteClick}>Delete Note</Button>
+            <br/>
+            <>__________________________________________________</>
+            <br/><br/>
         </div>
     )
-
 }
 
 export default Card

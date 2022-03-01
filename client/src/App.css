@@ -4,10 +4,6 @@
   border-radius: 10px;
 }
 
-.blank {
-  color: white;
-}
-
 .rose {
   font-family: 'Courier New', Courier, monospace;
   padding-top: 20px;
@@ -115,7 +111,7 @@
 .message_render {
   text-align: center;
   font-size: 20px;
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: black;
 }
@@ -138,28 +134,4 @@
 .form {
   text-align: center;
   padding-top: 30px;
-}
-
-.render_cards {
-  padding-top: 40px;
-}
-
-.form_input_rectangle {
-  position: absolute;
-  width: 575px;
-  height: 261px;
-  left: 452px;
-  top: 175px;
-  background: #FAFCAF;
-  border: 2px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.form_edit_rectangle {
-  text-align: center;
-}
-
-.top {
-  padding-top: 100px;
 }

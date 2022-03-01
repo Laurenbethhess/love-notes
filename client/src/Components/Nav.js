@@ -31,7 +31,7 @@ function Nav( {user, onSetUser}) {
                 <Link to="/new_card">Create</Link>
             </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
-                <Link to="/my_cards">My Cards</Link>
+                <Link to="/my_cards">My Notes</Link>
             </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
                 {user?

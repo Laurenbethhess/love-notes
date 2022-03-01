@@ -31,7 +31,7 @@ function Home() {
             <div align='center'>
                 <Box sx={{ width: '100%', maxWidth: 1200 }}>
                     <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
-                    <Link to="/new_card"><Button variant="outlined">Create</Button></Link>
+                        <Link to="/new_card"><Button variant="outlined">Create</Button></Link>
                     </Typography>
                 </Box>
             </div>
