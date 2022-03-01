@@ -41,8 +41,8 @@ function Login({ onLogin }) {
     <div className="login"> 
       {showLogin ? (
       <div>
-        <Card align='center' sx={{paddingTop: 2, minWidth: 600 }} style={{backgroundColor: "#B1DFB0"}}>
-          <Typography style={{fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
+        <Card align='center' sx={{paddingTop: 2, minWidth: 600 }} style={{backgroundColor: "#FFFAEA"}}>
+          <Typography style={{fontWeight: 'bold', fontSize: 25, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
             Welcome to <i>LoveNotes!</i>  Please Login.
           </Typography>       
           <CardContent align='center'>
@@ -79,7 +79,7 @@ function Login({ onLogin }) {
               </form>            
             </Typography>
             <br/>
-            <Typography>
+            <Typography style={{fontFamily: "Courier"}}>
               Don't have an account? &nbsp;
               <Button variant="outlined" onClick={() => setShowLogin(false)}>
                 Sign Up
@@ -90,7 +90,7 @@ function Login({ onLogin }) {
     </div>
     ) : (
       <div>
-        <Card sx={{ minWidth: 275 }} style={{backgroundColor: "#B1DFB0"}}>
+        <Card sx={{ minWidth: 275 }} style={{backgroundColor: "#FB5FFE"}}>
                 <CardContent>
                     <Typography style={{fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
                       <Signup onLogin={onLogin} />

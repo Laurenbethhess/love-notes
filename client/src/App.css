@@ -1,6 +1,6 @@
 .home_photo {
-  height: 300px;
-  width: 700px;
+  height: 350px;
+  width: 750px;
   border-radius: 10px;
 }
 
@@ -27,15 +27,17 @@
   background-color: #c21e56;
   background-size: 500px;
   text-align: center;
-  /* padding-top: 25px; */
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
   position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aqua {
   font-family: 'Courier New', Courier, monospace;
-  height: 277px;
+  height: 297px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -56,14 +58,16 @@
   background-color: aqua;
   background-size: 500px;
   text-align: center;
-  padding-top: 25px;
-  font-family: fantasy;
-  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .green {
   font-family: 'Courier New', Courier, monospace;
-  height: 277px;
+  height: 297px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -85,14 +89,16 @@
   background-color: #ACE1AF;
   background-size: 500px;
   text-align: center;
-  padding-top: 25px;
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .yellow {
   font-family: 'Courier New', Courier, monospace;
-  height: 277px;
+  height: 297px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -113,9 +119,11 @@
   background-color: #F4C430;
   background-size: 500px;
   text-align: center;
-  padding-top: 25px;
-  font-family: fantasy;
-  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .message_render {

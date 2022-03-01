@@ -19,23 +19,23 @@ function Nav( {user, onSetUser}) {
 
     return (
     <Box sx={{ flexGrow: 1 }}>
-        <AppBar align='center' position="fixed">
+        <AppBar align='center' position="fixed" style={{backgroundColor: "#FFFAEA"}}>
             <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontWeight: "bold", color: "black", fontFamily: "Courier"}}>
                 Welcome, {user.first_name}!
             </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontWeight: "bold", color: "black", fontFamily: "Courier"}}>
                 <Link to="/">Home</Link>
             </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontWeight: "bold", color: "black", fontFamily: "Courier"}}>
                 <Link to="/new_card">Create</Link>
             </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontWeight: "bold", color: "black", fontFamily: "Courier"}}>
                 <Link to="/my_cards">My Notes</Link>
             </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontWeight: "bold", color: "black", fontFamily: "Courier"}}>
                 {user?
-                    <Button variant="outlined" style={{fontFamily: "Courier", fontSize: 20}} onClick={handleLogoutClick} color="inherit">Logout</Button>
+                    <Button variant="outlined" style={{color: "black", fontFamily: "Courier", fontWeight: "bold", fontSize: 20}} onClick={handleLogoutClick} color="inherit">Logout</Button>
                 :
                     <Link to="/login">Login</Link>
                 } 
