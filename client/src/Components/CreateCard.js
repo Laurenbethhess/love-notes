@@ -134,6 +134,12 @@ function CreateCard( {onAddCard, user_id}) {
                 <br/>
               <Button variant="outlined" type="submit">Submit</Button>
             </form>
+            <div>
+              {errors.map((err) => (
+                <li key={err}>{err}</li>
+              ))}
+            </div>
+
           </CardContent>
         <br/>
     </div>
