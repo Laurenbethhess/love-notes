@@ -24,7 +24,7 @@ function Home() {
             <div align='center'>
                 <Box sx={{ width: '100%', maxWidth: 1200 }}>
                     <Typography style={{fontWeight: "bold", fontSize: 20, fontFamily: "Courier"}} align='center' variant="p" gutterBottom component="div">
-                        Get started here!
+                        Get started!
                     </Typography>
                 </Box>
             </div>

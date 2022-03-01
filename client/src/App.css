@@ -6,13 +6,16 @@
 
 .rose {
   font-family: 'Courier New', Courier, monospace;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   height: 297px;
   width: 210px;
-  font-size: 8px;
+  font-size: 7px;
   font-weight: bold;
   color: black;
   background-color: #c21e56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rose_thumb {
@@ -25,15 +28,16 @@
   background-color: #c21e56;
   background-size: 500px;
   text-align: center;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   font-family: fantasy;
   font-size: 40px;
+  position: center;
 }
 
 .aqua {
   font-family: 'Courier New', Courier, monospace;
   padding-top: 20px;
-  height: 297px;
+  height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -59,7 +63,7 @@
 .green {
   font-family: 'Courier New', Courier, monospace;
   padding-top: 20px;
-  height: 297px;
+  height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -85,7 +89,7 @@
 .yellow {
   font-family: 'Courier New', Courier, monospace;
   padding-top: 20px;
-  height: 297px;
+  height: 277px;
   width: 210px;
   font-size: 8px;
   font-weight: bold;
@@ -116,22 +120,5 @@
   color: black;
 }
 
-.e_card {
-  position: absolute;
-  width: 231px;
-  height: 50px;
-  left: 0px;
-  top: 0px;
-  font-family: cursive;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 75px;
-  text-align: center;
-  color: #000000;  
-}
 
-.form {
-  text-align: center;
-  padding-top: 30px;
-}
+

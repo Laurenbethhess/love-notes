@@ -19,10 +19,10 @@ function Nav( {user, onSetUser}) {
 
     return (
     <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed">
+        <AppBar align='center' position="fixed">
             <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
-                Welcome to <i>LoveNotes</i>, {user.first_name}!
+                Welcome, {user.first_name}!
             </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: "Courier"}}>
                 <Link to="/">Home</Link>
