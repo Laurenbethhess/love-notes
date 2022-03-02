@@ -1,24 +1,42 @@
-# README
+<h1>LoveNotes</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Right click on the `README.md` file and select `Open Preview` to view in preview mode.
 
-Things you may want to cover:
+This is an application that allows a user to create a personalized note and save/download it as a pdf.
 
-* Ruby version
+![checkpoint demo](LoveNotes-high.gif)
 
-* System dependencies
+![checkpoint demo](LoveNotes-high-save.gif)
 
-* Configuration
+This is a Rails and React fully built application using Ruby v 2.7.4, Rails v 7.0.2.2, Node v 16.3.0, and postgresql v 14.2.
 
-* Database creation
+<h2>Setup</h2>
 
-* Database initialization
+To download the dependencies for both the frontend and backend, from the root directory in your terminal run:
 
-* How to run the test suite
+```sh
+bundle install
+npm install --prefix client
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+The models and the relationships for the database and tables are outlined here:
 
-* Deployment instructions
+![domain diagram](ERD.png)
 
-* ...
+There is some starter code in the 'db/seeds.rb' file.  To seed the data, run:
+
+```sh
+rails db:seed
+```
+
+You can run your Rails API on [`localhost:3000`](http://localhost:3000) by running:
+
+```sh
+rails s
+```
+
+You can run your React app on [`localhost:4000`](http://localhost:4000) by running:
+
+```sh
+npm start --prefix client
+```
