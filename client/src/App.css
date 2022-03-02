@@ -52,7 +52,7 @@
   width: 400px;
   height: 100px;
   top: 150px;
-  left: 65%;
+  left: 62.5%;
   position: absolute;
   border-radius: 25px;
   background-color: aqua;
@@ -112,7 +112,7 @@
 .yellow_thumb {
   width: 400px;
   height: 100px;
-  left: 65%;
+  left: 62.5%;
   top: 325px;
   position: absolute;
   border-radius: 25px;
