@@ -21,7 +21,7 @@
   width: 400px;
   height: 100px;
   top: 150px;
-  left: 100px;
+  left: 10%;
   position: absolute;
   border-radius: 25px;
   background-color: #c21e56;
@@ -52,7 +52,7 @@
   width: 400px;
   height: 100px;
   top: 150px;
-  left: 950px;
+  left: 65%;
   position: absolute;
   border-radius: 25px;
   background-color: aqua;
@@ -82,7 +82,7 @@
 .green_thumb {
   width: 400px;
   height: 100px;
-  left: 100px;
+  left: 10%;
   top: 325px;
   position: absolute;
   border-radius: 25px;
@@ -112,7 +112,7 @@
 .yellow_thumb {
   width: 400px;
   height: 100px;
-  left: 950px;
+  left: 65%;
   top: 325px;
   position: absolute;
   border-radius: 25px;
