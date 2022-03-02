@@ -18,17 +18,14 @@
 }
 
 .rose_thumb {
-  width: 400px;
-  height: 100px;
-  top: 150px;
-  left: 10%;
-  position: absolute;
+  width: 200px;
+  height: 50px;
   border-radius: 25px;
   background-color: #c21e56;
   background-size: 500px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
+  font-size: 20px;
   position: center;
   display: flex;
   justify-content: center;
@@ -49,17 +46,14 @@
 }
 
 .aqua_thumb {
-  width: 400px;
-  height: 100px;
-  top: 150px;
-  left: 62.5%;
-  position: absolute;
+  width: 200px;
+  height: 50px;
   border-radius: 25px;
   background-color: aqua;
   background-size: 500px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 35px;
+  font-size: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,21 +70,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .green_thumb {
-  width: 400px;
-  height: 100px;
-  left: 10%;
-  top: 325px;
-  position: absolute;
+  width: 200px;
+  height: 50px;
   border-radius: 25px;
   background-color: #ACE1AF;
   background-size: 500px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,17 +100,14 @@
 }
 
 .yellow_thumb {
-  width: 400px;
-  height: 100px;
-  left: 62.5%;
-  top: 325px;
-  position: absolute;
+  width: 200px;
+  height: 50px;
   border-radius: 25px;
   background-color: #F4C430;
   background-size: 500px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 28px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;

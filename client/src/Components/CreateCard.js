@@ -54,12 +54,12 @@ function CreateCard( {onAddCard, user_id}) {
     }
   
     return (
-      <div align='center' style={{paddingTop: 65}}>
+      <div align='center' style={{paddingTop: 100}}>
         <div className="rose_thumb">Roses are red</div>
         <div className="aqua_thumb">As cold as blue blazes</div>
         <div className="green_thumb">Green vibes only</div>
         <div className="yellow_thumb">I'm just mad about saffron</div>
-          <CardContent style={{paddingTop: 80}}>
+          <CardContent>
             <form onSubmit={handleSubmit}>
               <FormControl sx={{ minWidth: 275, bgcolor: '#cfe8fc' }}>
                 <InputLabel align='center'>Choose Template</InputLabel>
